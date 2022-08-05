@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    $ git clone https://github.com/shinkichi196352/sample.git
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”description“ content=“説明文～“ />
+    <title>Open Cafe</title>
+    <!-- リセットCSSの読み込み -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <!-- FontAwesomeのKitCodeはご自身コードを入れてください。 -->
+    <script src="https://kit.fontawesome.com/f8e43d4244.js"
+      crossorigin="anonymous"></script>
+    <!-- jQueryの読み込み -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous">
+</script>
+    <!-- drawer.css -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <!-- jquery & iScroll -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <!-- swiperの読み込み -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+      />
+    <!-- グーグルフォントはあくまでも仮なのでご自身で記述してください。 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Damion&family=Noto+Serif+JP:wght@400;700&family=Patua+One&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body class="drawer drawer--right">
+
+    <header role="banner">
+      <!-- ハンバーガーボタン -->
+      <button type="button" class="drawer-toggle drawer-hamburger"
+        id="HbButton">
+        <span class="sr-only">toggle navigation</span>
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <!-- ナビゲーションの中身 -->
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+          <li>
+            <a class="drawer-brand" href="#">
+              <img src="./img/top-img/logo_light.png" alt="">
+            </a>
+          </li>
+          <li><a class="drawer-menu-item" href="#">Top<span>/</span><span>トップ</span></a></li>
+          <li><a class="drawer-menu-item" href="#">CONCEPT<span>/</span><span>コンセプト</span></a></li>
+          <li><a class="drawer-menu-item" href="#">MENU<span>/</span><span>メニュー</span></a></li>
+          <li><a class="drawer-menu-item" href="#">NEWS<span>/</span><span>お知らせ</span></a></li>
+          <li><a class="drawer-menu-item" href="#">SHOP<span>/</span><span>店舗情報</span></a></li>
+          <li><a class="drawer-menu-item" href="#">GIFT<span>/</span><span>ギフト・贈り物</span></a></li>
+          <li><a class="drawer-menu-item" href="#">CONTACT<span>/</span><span>お問い合わせ</span></a></li>
+          <div class="sns__link--white">
+            <div class="sns__link--twitter"><a href="#"><i class="fa-brands
+                  fa-twitter fa-2x"></i></a></div>
+            <div class="sns__link--instagram"><a href="#"><i class="fa-brands
+                  fa-instagram fa-2x"></i></a></div>
+            <div class="sns__link--youtube"><a href="#"><i class="fa-brands
+                  fa-youtube fa-2x"></i></a></div>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="fv">
+        <div class="fv__wrap">
+          <div class="fv__menu">
+            <div class="fv__logo">
+              <h1 class="fv__logo--title">
+                <a href="#"><img src="/img/top-img/logo_dark.png"
+                    alt="OpenCafeのロゴ"></a>
+              </h1>
+            </div>
+            <nav class="fv__nav">
+              <ul class="fv__nav--list">
+                <li class="fv__nav--item"><a href="#">Top<span>トップ</span></a></li>
+                <li class="fv__nav--item"><a href="#">CONCEPT<span>コンセプト</span></a></li>
+                <li class="fv__nav--item"><a href="#">MENU<span>メニュー</span></a></li>
+                <li class="fv__nav--item"><a href="#">NEWS<span>お知らせ</span></a></li>
+                <li class="fv__nav--item"><a href="#">SHOP<span>店舗情報</span></a></li>
+                <li class="fv__nav--item"><a href="#">GIFT<span>ギフト・贈り物</span></a></li>
+                <li class="fv__nav--item"><a href="#">CONTACT<span>お問い合わせ</span></a></li>
+              </ul>
+              <div class="sns__link--black">
+                <div class="sns__link--twitter"><a href="#"><i class="fa-brands
+                      fa-twitter fa-lg"></i></a></div>
+                <div class="sns__link--instagram"><a href="#"><i
+                      class="fa-brands
+                      fa-instagram fa-lg"></i></a></div>
+                <div class="sns__link--youtube"><a href="3"><i class="fa-brands
+                      fa-youtube fa-lg"></i></a></div>
+              </div>
+            </nav>
+          </div>
+          <div class="swiper sp">
+            <div class="swiper-container">
+              <div class="swiper-sp__logp">
+                <img src="./img/top-img/logo_light.png" alt="OpenCafeのスマホ用ロゴ">
+              </div>
+              <!-- 必要に応じたwrapper -->
+              <div class="swiper-wrapper">
+
+                <!-- スライド -->
+                <div class="swiper-slide">
+                  <img src="./img/top-img/img_mainvisual1_sp.png"
+                    alt="朝食テンプレート">
+                  <div class="main__message">
+                    パスタとコーヒーが<br>とってもおいしい、<br>ほっと落ち着くのんびり空間。
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="./img/top-img/img_mainvisual2_sp.png"
+                    alt="店内のカウンター">
+                  <div class="main__message">
+                    パスタとコーヒーが<br>とってもおいしい、<br>ほっと落ち着くのんびり空間。
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="./img/top-img/img_mainvisual3_sp.png" alt="">
+                  <div class="main__message">
+                    パスタとコーヒーが<br>とってもおいしい、<br>ほっと落ち着くのんびり空間。
+                  </div>
+                </div>
+              </div>
+              <div class="pickup-news">
+                <div class="pickup-news__img">
+                  <img src="./img/top-img/img_mainvisual1.png"
+                    alt="ピックアップニュースの画像">
+                </div>
+                <div class="pickup-news__contain">
+                  <div class="pickup-news__contain--date">2021.01.01</div>
+                  <div class="pickup-news__contain--text">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</div>
+                </div>
+                <div class="pickup-news__ribbon">カテゴリ</div>
+                <div class="pickup-news__balloon">
+                  <img src="./img/top-img/img_balloon-pickup.png"
+                    alt="ピックアップニュースのバルーン">
+                </div>
+              </div>
+              <!-- 必要に応じてページネーション -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <!-- スライダーのコンテナ -->
+          <div class="swiper pc">
+            <div class="swiper-container">
+              <!-- 必要に応じたwrapper -->
+              <div class="swiper-wrapper">
+                <!-- スライド -->
+                <div class="swiper-slide">
+                  <img src="./img/top-img/img_mainvisual1.png" alt="朝食テンプレート">
+                  <div class="main__message">
+                    パスタとコーヒーがとってもおいしい、<br>ほっと落ち着くのんびり空間。
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/top-img/img_mainvisual2.png" alt="店内のカウンター">
+                  <div class="main__message">
+                    パスタとコーヒーがとってもおいしい、<br>ほっと落ち着くのんびり空間。
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/top-img/img_mainvisual3.png" alt="店内でくつろぐお客様">
+                  <div class="main__message">
+                    パスタとコーヒーがとってもおいしい、<br>ほっと落ち着くのんびり空間。
+                  </div>
+                </div>
+                <div class="pickup-news">
+                  <div class="pickup-news__img">
+                    <img src="./img/top-img/img_mainvisual1.png"
+                      alt="ピックアップニュースの画像">
+                  </div>
+                  <div class="pickup-news__contain">
+                    <div class="pickup-news__contain--date">2021.01.01</div>
+                    <div class="pickup-news__contain--text">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</div>
+                  </div>
+                  <div class="pickup-news__ribbon">カテゴリ</div>
+                  <div class="pickup-news__balloon">
+                    <img src="./img/top-img/img_balloon-pickup.png"
+                      alt="ピックアップニュースのバルーン">
+                  </div>
+                </div>
+                <!-- 必要に応じてページネーション -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <!-- スライダーのコンテナ -->
+        </div>
+      </div>
+      <div class="coffee-beans_bg sp">
+        <img src="./img/top-img/bg_coffee-beans.png" alt="">
+      </div>
+
+
+
+      <!-- ⇩ concept -->
+      <section class="concept" id="concept">
+        <div class="concept--bg pc">
+          <img src="./img/top-img/bg_coffee-beans.png" alt="">
+        </div>
+        <div class="concept__wrapper">
+          <div class="concept__img-box">
+            <img src="./img/top-img/img_concept.png" alt="３種類のコーヒーがならんでいる">
+          </div>
+          <div class="concept__contain">
+            <div class="concept__contain--title-box">
+              <h2 class="concept__contain--title">CONCEPT<span>当店のこだわり</span></h2>
+            </div>
+            <div class="concept__contain--main">最高のコーヒーと、<br>時の流れを味わうことができる<br>手作りカフェ</div>
+            <div class="concept__contain--sub">ダミー_国内外から賞賛を<br>受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。<br>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。<br>
+              <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。</p>
+            </div>
+            <button class="button concept__btn">
+              <a href="#" class="btn pushright"><span>詳しくはこちら<i class="fa-solid
+                    fa-angle-right"></i></span></a>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⇩ lunch -->
+      <section class="lunch" id="lunch">
+        <div class="coffee-leaves__bg">
+          <img src="./img/top-img/bg_coffee-leaves.png" alt="">
+        </div>
+        <h2 class="section__title">SPECIAL LUNCH SET<span>今月のスペシャルランチセット</span></h2>
+        <div class="lunch__wrapper">
+          <div class="lunch__wrapper--bg">
+            <img src="./img/top-img/img_balloon-special-lunch-set.png"
+              alt="パスタ・サラダ・ドリンクのお得なセット">
+          </div>
+          <h3 class="lunch__title">お好きなパスタをお選びください</h3>
+          <div class="lunch-sets">
+            <ul class="lunch-sets__list">
+              <li class="lunch-sets__item">
+                <img src="./img/top-img/img_special_pasta1.png"
+                  alt="スペシャルランチセットA">
+                <div class="lunch-sets__contain">
+                  <div class="lunch-sets__contain--no">A</div>
+                  <div class="lunch-sets__contain--name">テキストテキストの○○風パスタ</div>
+                </div>
+              </li>
+              <li class="lunch-sets__item">
+                <img src="./img/top-img/img_special_pasta2.png"
+                  alt="スペシャルランチセットB">
+                <div class="lunch-sets__contain">
+                  <div class="lunch-sets__contain--no">B</div>
+                  <div class="lunch-sets__contain--name">テキストテキストの○○風パスタ</div>
+                </div>
+              </li>
+              <li class="lunch-sets__item">
+                <img src="./img/top-img/img_special_pasta3.png"
+                  alt="スペシャルランチセットC">
+                <div class="lunch-sets__contain">
+                  <div class="lunch-sets__contain--no">C</div>
+                  <div class="lunch-sets__contain--name">テキストテキストの○○風パスタ</div>
+                </div>
+              </li>
+              <li class="lunch-sets__item">
+                <img src="./img/top-img/img_special_pasta4.png"
+                  alt="スペシャルランチセットD">
+                <div class="lunch-sets__contain">
+                  <div class="lunch-sets__contain--no">D</div>
+                  <div class="lunch-sets__contain--name">テキストテキストの○○風パスタ</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="lunch-special">
+            <ul class="lunch-special__list">
+              <li class="lunch-special__item">
+                <img src="./img/top-img/lunch-01.png" alt="パスタ">
+                <div class="lunch-special__item--menu">パスタ</div>
+              </li>
+              <div class="lunch-special__plus"><i class="fa-solid fa-plus"></i></div>
+              <li class="lunch-special__item">
+                <img src="./img/top-img/lunch-02.png" alt="サラダ">
+                <div class="lunch-special__item--menu">サラダ</div>
+              </li>
+              <div class="lunch-special__plus"><i class="fa-solid fa-plus"></i></div>
+              <li class="lunch-special__item">
+                <img src="./img/top-img/lunch-03.png" alt="ドリンク">
+                <div class="lunch-special__item--menu">ドリンク</div>
+              </li>
+            </ul>
+            <div class="lunch-special__cost">
+              <div class="lunch-special__cost--menu">スペシャルランチセット<span>【選べる3品】</span></div>
+              <div class="lunch-special__cost--price">1,280<span>yen</span></div>
+              <div class="lunch-special__cost--schedule">(11:00 AM〜14:00 PMまで)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⇩ grand-menu -->
+      <section class="grand-menu">
+        <div class="coffee-leaves2">
+          <img src="./img/top-img/bg_coffee-leaves2.png" alt="">
+        </div>
+        <h2 class="section__title">GRAND MENU<span>グランドメニュー</span></h2>
+        <div class="grand-menu__wrapper">
+          <div class="grand-menu__contents">
+            <div class="grand-menu__contents--title">パスタ</div>
+            <ul class="grand-menu__contents--list">
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_pasta1.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">テキストテキストテキストの○○○○風パスタ</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_pasta2.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">テキストテキストの○○○○風パスタ</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_pasta3.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">テキストテキストの○○○○風パスタ</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="grand-menu__contents">
+            <div class="grand-menu__contents--title">サラダ</div>
+            <ul class="grand-menu__contents--list">
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_salad1.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○風サラダ</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_salad2.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○風サラダ</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_salad3.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○風サラダ</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="grand-menu__contents">
+            <div class="grand-menu__contents--title">パン＆スィーツ</div>
+            <ul class="grand-menu__contents--list">
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_sweets1.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○サンド</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_sweets2.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○サンド</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_sweets3.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○サンド</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_sweets4.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○サンド</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_sweets5.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○サンド</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item">
+                <div class="grand-menu__contents--img">
+                  <img src="./img/menu-img/img_sweets6.png" alt="">
+                </div>
+                <div class="grand-menu__contents--box">
+                  <div class="grand-menu__contents--box-title">○○○○サンド</div>
+                  <div class="grand-menu__contents--box-price">780 yen</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="grand-menu__contents">
+            <div class="grand-menu__contents--title">ドリンク</div>
+            <ul class="grand-menu__contents--list-drink">
+              <li class="grand-menu__contents--item-drink drink-img">
+                <img src="./img/top-img/img_drink1.png" alt="">
+              </li>
+              <li class="grand-menu__contents--item-drink drink-menus">
+                <div class="drink-title">コーヒー</div>
+                <div class="">
+                  <div class="drink-menu">ブレンド<span>500yen</span></div>
+                  <div class="drink-menu">カフェラテ<span>500yen</span></div>
+                  <div class="drink-menu">豆乳ラテ<span>500yen</span></div>
+                  <div class="drink-menu">カフェモカ<span>500yen</span></div>
+                  <div class="drink-menu">キャラメルラテ<span>500yen</span></div>
+                  <div class="drink-menu">バニララテ<span>500yen</span></div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item-drink drink-menus">
+                <div class="drink-title">紅茶</div>
+                <div class="">
+                  <div class="drink-menu">ストレート<span>500yen</span></div>
+                  <div class="drink-menu">ミルク<span>500yen</span></div>
+                  <div class="drink-menu">アップル<span>500yen</span></div>
+                </div>
+              </li>
+              <li class="grand-menu__contents--item-drink drink-menus">
+                <div class="drink-title">ソフトドリンク</div>
+                <div class="">
+                  <div class="drink-menu">バナナ<span>500yen</span></div>
+                  <div class="drink-menu">オレンジ<span>500yen</span></div>
+                  <div class="drink-menu">アップル<span>500yen</span></div>
+                  <div class="drink-menu">マンゴー<span>500yen</span></div>
+                  <div class="drink-menu">ミックス<span>500yen</span></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="button grand-menu__btn">
+          <a href="#" class="btn pushright"><span>その他のメニュー<i class="fa-solid
+                fa-angle-right"></i></span></a>
+        </button>
+        <div class="coffee-beans2">
+          <img src="./img/top-img/bg_coffee-beans2.png" alt="">
+        </div>
+      </section>
+
+      <!-- ⇩ gallery -->
+      <section class="gallery">
+        <h2 class="section__title gallery__title">GALLERY<span>ギャラリー</span></h2>
+        <div class="gallery__wrapper">
+          <ul class="gallery__list">
+            <li class="gallery__item"><img src="./img/top-img/img_gallery1.png"
+                alt=""></li>
+            <li class="gallery__item"><img src="./img/top-img/img_gallery2.png"
+                alt=""></li>
+            <li class="gallery__item"><img src="./img/top-img/img_gallery3.png"
+                alt=""></li>
+            <li class="gallery__item"><img src="./img/top-img/img_gallery4.png"
+                alt=""></li>
+          </ul>
+          <button class="button grand-menu__btn">
+            <a href="#" class="btn pushright"><span>インスタグラムを見る<i class="fa-solid
+                  fa-angle-right"></i></span></a>
+          </button>
+        </div>
+      </section>
+
+      <!-- ⇩ news -->
+      <section class="news">
+        <h2 class="section__title">NEWS<span>おしらせ</span></h2>
+        <div class="news__wrapper">
+          <div class="news__main">
+            <a href="">
+              <img src="./img/top-img/img_news1.png" alt="">
+              <div class="news__contain">
+                <div class="news__title">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。</div>
+                <div class="news__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
+                <div class="news__date">2021.01.01</div>
+              </div>
+            </a>
+          </div>
+          <div class="news__sub">
+            <div class="news__sub-list">
+              <div class="news__sub-item">
+                <a href="">
+                  <img src="./img/top-img/img_news1.png" alt="">
+                  <div class="news__contain">
+                    <div class="news__title">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</div>
+                    <div class="news__date">2021.01.01</div>
+                  </div>
+                </a>
+              </div>
+              <div class="news__sub-item">
+                <a href="">
+                  <img src="./img/top-img/img_news1.png" alt="">
+                  <div class="news__contain">
+                    <div class="news__title">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</div>
+                    <div class="news__date">2021.01.01</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="news__sub-list">
+              <div class="news__sub-item">
+                <img src="./img/top-img/img_news1.png" alt="">
+                <div class="news__contain">
+                  <div class="news__title">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</div>
+                  <div class="news__date">2021.01.01</div>
+                </div>
+              </div>
+              <div class="news__sub-item">
+                <img src="./img/top-img/img_news1.png" alt="">
+                <div class="news__contain">
+                  <div class="news__title">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</div>
+                  <div class="news__date">2021.01.01</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button grand-menu__btn">
+          <a href="#" class="btn pushright"><span>過去のお知らせ<i class="fa-solid
+                fa-angle-right"></i></span></a>
+        </button>
+      </section>
+
+      <!-- ⇩ access -->
+      <section class="access">
+        <h2 class="section__title">ACCESS<span>アクセス</span></h2>
+        <div class="access__wrapper">
+          <div class="access__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12960.148828453024!2d139.580213!3d35.700702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ee39b555205f%3A0xabb26a0a2fbda595!2z44CSMTgwLTAwMDMg5p2x5Lqs6YO95q2m6JS16YeO5biC5ZCJ56Wl5a-65Y2X55S677yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1659587481475!5m2!1sja!2sjp"
+              width="668" height="367" style="border:0;" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="access__contents">
+            <div class="access__content-left">
+              <table>
+                <thead>
+                  <tr>
+                    <td>住所</td>
+                    <td>〒000-0000<br>東京都武蔵野市吉祥寺南町一丁目</td>
+                  </tr>
+                  <tr>
+                    <td>TEL</td>
+                    <td>0123-456-789</td>
+                  </tr>
+                  <tr>
+                    <td>Mail</td>
+                    <td>example@mail.com</td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="access__content-right">
+              <table>
+                <thead>
+                  <tr>
+                    <td>営業時間</td>
+                    <td>7:00～21:00<br>※ラストオーダー20:30</td>
+                  </tr>
+                  <tr>
+                    <td>定休日</td>
+                    <td>水曜日</td>
+                  </tr>
+                  <tr>
+                    <td>座席</td>
+                    <td>テーブル席20席／カウンター席6席</td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+    <!-- drawer.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
